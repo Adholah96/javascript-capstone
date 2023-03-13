@@ -15,3 +15,15 @@
   justify-content: space-between;
   align-items: center;
 }
+.footer {
+  height: 5rem;
+  background-color: #765b53;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+}
