@@ -20,7 +20,7 @@ export const fetchAnime = async (url) => {
 
 export const fetchLikes = async (url) => {
   const response = await fetch(url).then((res) => res.json())
-  console.log(response)
+  return response
 }
 export async function fetchComments(url) {
   const response = await fetch(url).then((res) => res.json())
