@@ -6,9 +6,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   overflow-x: hidden;
 }
+
 .header {
   height: 10rem;
   background-color: #e6728d;
@@ -18,22 +20,31 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .footer {
   background-color: #765b53;
   color: white;
   border: 2px solid red;
 }
+
 ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .main {
   display: grid;
   grid-template-columns: repeat(5, 2fr);
   gap: 2em;
   padding: 1em;
 }
+
+.like {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .anime-holder {
   border: 2px solid #f2d6c2;
   border-radius: 10px;
@@ -44,6 +55,7 @@ ul {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   transition: 0.1s ease-in;
 }
+
 .anime-holder:hover {
   box-shadow: none;
   transform: scale(1.03);
@@ -55,18 +67,22 @@ ul {
 .anime-holder p {
   margin-top: 1rem;
 }
+
 .anime-holder p {
   margin-bottom: 1rem;
 }
+
 .anime-holder h1 {
   font-size: 15px;
 }
+
 .user-interaction {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2em;
 }
+
 .user-interaction h3 {
   font-size: 15px;
   border: 2px solid #e6728d;
@@ -76,20 +92,19 @@ ul {
   cursor: pointer;
   transition: all 0.1s ease-in;
 }
+
 .user-interaction h3:hover {
   border: none;
   background-color: #e6728d;
   color: #ebcfd6;
 }
-.like {
-  font-size: 2rem;
-  cursor: pointer;
-}
+
 .image-holder {
   object-fit: contain;
   border-radius: 10px;
   padding-top: 1em;
 }
+
 .image-holder img {
   width: 200px;
   height: 300px;
