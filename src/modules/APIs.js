@@ -13,18 +13,18 @@ export const fetchAnime = async (url) => {
       'X-RapidAPI-Key': '357461956cmsh1d505ae08426d9ap12c495jsnaa2b76bae2ac',
       'X-RapidAPI-Host': 'anime-db.p.rapidapi.com',
     },
-  }
-  const response = await fetch(url, options).then((res) => res.json())
-  return response.data
-}
+  };
+  const response = await fetch(url, options).then((res) => res.json());
+  return response.data;
+};
 
 export const fetchLikes = async (url) => {
-  const response = await fetch(url).then((res) => res.json())
-  return response
-}
+  const response = await fetch(url).then((res) => res.json());
+  return response;
+};
 export async function fetchComments(url) {
-  const response = await fetch(url).then((res) => res.json())
-  return response
+  const response = await fetch(url).then((res) => res.json());
+  return response;
 }
 export const postLikes = async (id, url) => {
   await fetch(url, {
@@ -35,8 +35,8 @@ export const postLikes = async (id, url) => {
     body: JSON.stringify({
       item_id: id,
     }),
-  })
-}
+  });
+};
 export const postComments = async (id, username, comment, url) => {
   await fetch(url, {
     method: 'POST',
@@ -48,5 +48,5 @@ export const postComments = async (id, username, comment, url) => {
       username,
       comment,
     }),
-  })
-}
+  });
+};

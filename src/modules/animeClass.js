@@ -1,23 +1,24 @@
-import { fetchAnime, fetchLikes } from './APIs'
+import { fetchAnime, fetchLikes } from './APIs.js';
 
 class Anime {
   constructor() {
-    this.animes = []
+    this.animes = [];
   }
+
   async displayAnime(animeHolder, animeurl, likesurl) {
-    const anime = await fetchAnime(animeurl)
-    const likes = await fetchLikes(likesurl)
+    const anime = await fetchAnime(animeurl);
+    const likes = await fetchLikes(likesurl);
 
     anime.forEach((anime, index) => {
-      const div = document.createElement('div')
-      div.classList.add('anime-holder')
-      let like = []
+      const div = document.createElement('div');
+      div.classList.add('anime-holder');
+      let like = [];
       if (likes) {
-        like = likes.filter((item) => item.item_id === `${index}`)
+        like = likes.filter((item) => item.item_id === `${index}`);
       }
-      let liked = 0
+      let liked = 0;
       if (like.length > 0) {
-        liked = like[0].likes
+        liked = like[0].likes;
       }
       div.innerHTML = `
       <div class="image-holder">
@@ -33,18 +34,18 @@ class Anime {
       <p class="likes-counter">
         <span id="span-${index}">${liked}</span> likes
       </p>
-  `
-      animeHolder.appendChild(div)
+  `;
+      animeHolder.appendChild(div);
 
       const animeItem = {
         id: index,
         title: anime.title,
         image: anime.image,
         likes: liked,
-      }
-      this.animes.push(animeItem)
-    })
+      };
+      this.animes.push(animeItem);
+    });
   }
 }
 
-export default Anime
+export default Anime;
