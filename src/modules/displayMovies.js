@@ -14,7 +14,7 @@ const displayAnime = async (animes) => {
           <button data-id=${anime.id} class="btn-like">Like</button>
         </div>
         <p class="likes-counter">
-          <span id="${anime.id}" class="total-likes"></span> likes
+          <span id="show-${anime.id}" class="total-likes"></span> likes
         </p>
       `
     animeHolder.appendChild(div)
