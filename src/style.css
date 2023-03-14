@@ -114,13 +114,14 @@ ul {
 .popup {
   background: rgba(33, 31, 31, 0.8);
   width: 100%;
-  height: auto;
-  position: absolute;
+  max-height: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   object-fit: contain;
   display: none;
+  overflow-y: scroll;
   transition: all 0.3s linear;
 }
 

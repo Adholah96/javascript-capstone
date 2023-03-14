@@ -26,7 +26,7 @@ class Anime {
       </div>
       <h1 id="title-${index}">${anime.title}</h1>
       <div class="user-interaction">
-        <h3 id="comment-${index}"class="modal-btn">COMMENT</h3>
+        <h3 id="comment-${index}"class="modal-btn" id="modal">COMMENT</h3>
         <div id="liked-${index}" class="toggle">
           <input id="likei-${index}" type="checkbox" class="heart-check" />
         </div>
