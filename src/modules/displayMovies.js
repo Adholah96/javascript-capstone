@@ -1,4 +1,4 @@
-const animeHolder = document.querySelector('.main')
+const animeHolder = document.querySelector('.main');
 
 const displayAnime = async (animes) => {
   animes.forEach((anime) => {
@@ -14,6 +14,7 @@ const displayAnime = async (animes) => {
           <h3 id="${anime.id}"class="modal-btn">COMMENT</h3>
           <button data-id=${anime.id} class="btn-like">Like</button>
         </div>
+
         <p class="likes-counter" data-id ="${anime.id}">
           <span class="total-likes"></span> likes </p>
       `
@@ -21,4 +22,5 @@ const displayAnime = async (animes) => {
   })
 }
 
-export default displayAnime
+
+export default displayAnime;

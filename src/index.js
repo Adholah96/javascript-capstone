@@ -1,3 +1,4 @@
+
 import './style.css'
 import './cute.png'
 import './anime.jpeg'
@@ -25,3 +26,5 @@ window.addEventListener('load', async () => {
   const likes = await getLikes()
   showLike(likes)
 })
+
+
