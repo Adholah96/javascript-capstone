@@ -1,7 +1,6 @@
-import getLikes from './getLikes.js'
+import getLikes from './getLikes.js';
 
-const url =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/7FpyBFkfuWU4RjPiGc48/likes/'
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/7FpyBFkfuWU4RjPiGc48/likes/';
 
 const postLike = async (id) => {
   await fetch(url, {
@@ -12,8 +11,8 @@ const postLike = async (id) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-  getLikes()
-}
+  });
+  getLikes();
+};
 
-export default postLike
+export default postLike;
