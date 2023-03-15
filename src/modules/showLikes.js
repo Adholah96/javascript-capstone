@@ -6,7 +6,6 @@ const showLike = async (likes) => {
       const likeCount = showLike.querySelector('.total-likes');
       likeCount.innerHTML = `${like.likes}`;
     }
-  })
-}
-export default showLike
-
+  });
+};
+export default showLike;

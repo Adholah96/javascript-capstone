@@ -2,9 +2,9 @@ const animeHolder = document.querySelector('.main');
 
 const displayAnime = async (animes) => {
   animes.forEach((anime) => {
-    const div = document.createElement('div')
-    div.classList.add('anime-holder')
-    div.setAttribute('id', `show-${anime.id}`)
+    const div = document.createElement('div');
+    div.classList.add('anime-holder');
+    div.setAttribute('id', `show-${anime.id}`);
     div.innerHTML = `
         <div class="image-holder">
           <img src=${anime.image.medium} alt="first-anime" />
@@ -17,10 +17,9 @@ const displayAnime = async (animes) => {
 
         <p class="likes-counter" data-id ="${anime.id}">
           <span class="total-likes"></span> likes </p>
-      `
-    animeHolder.appendChild(div)
-  })
-}
-
+      `;
+    animeHolder.appendChild(div);
+  });
+};
 
 export default displayAnime;
