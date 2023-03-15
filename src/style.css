@@ -204,7 +204,7 @@ input[type=text]:focus {
   border: none;
 }
 
-tr {
+.comment-holder {
   border: none;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -215,7 +215,7 @@ tr {
   margin-bottom: 1rem;
 }
 
-td:last-child {
+.comment {
   color: lightslategray;
 }
 
