@@ -5,7 +5,7 @@ const showLike = async (likes) => {
     if (showLike !== null) {
       const likeCount = showLike.querySelector('.total-likes')
       if (likeCount !== null) {
-        likeCount.innerHTML = `${like.likes} likes`
+        likeCount.innerHTML = `${like.likes}`
       }
     }
   })

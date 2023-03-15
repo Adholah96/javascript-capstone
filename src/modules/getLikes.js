@@ -1,5 +1,3 @@
-import showLike from './showLikes.js'
-
 const url =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/7FpyBFkfuWU4RjPiGc48/likes/'
 const getLikes = async () => {
