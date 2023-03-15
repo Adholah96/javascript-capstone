@@ -1,5 +1,4 @@
 const animeHolder = document.querySelector('.main');
-
 const displayAnime = async (animes) => {
   animes.forEach((anime) => {
     const div = document.createElement('div');
@@ -16,7 +15,7 @@ const displayAnime = async (animes) => {
         </div>
 
         <p class="likes-counter" data-id ="${anime.id}">
-          <span class="total-likes"></span> likes </p>
+          <span class="total-likes"> 0 </span> likes </p>
       `;
     animeHolder.appendChild(div);
   });

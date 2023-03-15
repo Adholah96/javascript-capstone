@@ -1,3 +1,6 @@
+import sendComment from './sendComment.js';
+import displayComment, { includeUI } from './displayComment.js';
+
 const container = document.querySelector('.pop-content');
 const moviePopup = async (id, image, name, summary) => {
   container.innerHTML = '';
@@ -11,25 +14,10 @@ const moviePopup = async (id, image, name, summary) => {
           <p class="descr">
             ${summary}
           </p>
-          <table>
-            <tbody>
-              <tr>
-                <td>Qwerty Hjgggg</td>
-                <td>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                  quia beatae, totam commodi blanditiis
-                </td>
-              </tr>
-
-              <tr>
-                <td>Hkkbg Gtttddd</td>
-                <td>
-                  Quam, provident maxime similique aperiam cum, hic pariatur nam
-                  modi a reiciendis corrupti necessitatibus illo illum!
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <div class="comment-holder">
+                <div class="comments">
+                </div>
+            </div>
           <p>Comments (<span class="number">2</span>)</p>
           <form id="add-comment">
             <div class="error">Please fill in all fields!</div>
@@ -46,6 +34,21 @@ const moviePopup = async (id, image, name, summary) => {
             </div>
           </form>
     `;
+  const names = document.getElementById('name');
+  const comment = document.getElementById('comment');
+  const submit = document.getElementById('sub-comment');
+
+  submit.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (names.value !== '' && comment.value !== '') {
+      await sendComment(id, names.value, comment.value);
+      includeUI(names.value, comment.value);
+      names.value = '';
+      comment.value = '';
+    }
+  });
+
+  displayComment(id);
 };
 
 export default moviePopup;
