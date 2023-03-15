@@ -8,5 +8,4 @@ const showLike = async (likes) => {
     }
   })
 }
-
 export default showLike
