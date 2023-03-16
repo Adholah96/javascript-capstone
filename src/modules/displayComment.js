@@ -18,12 +18,15 @@ const displayComment = async (id) => {
 };
 
 export const includeUI = (username, comment) => {
-  const comments = document.querySelector('.comment-holder');
-  const shwComments = document.querySelector('.comments');
-  shwComments.innerHTML += `
-  <p class="addedComment">${username}</br>${comment}</p>
-  `;
-  comments.appendChild(shwComments);
+  const commentsHolder = document.querySelector('.comment-holder');
+  const newComment = document.createElement('p');
+  newComment.classList.add('addedComment');
+  newComment.innerHTML = `${username}</br>${comment}`;
+  commentsHolder.appendChild(newComment);
+
+  const totalCount = document.querySelector('.number');
+  const currentCount = parseInt(totalCount.textContent, 10);
+  totalCount.textContent = currentCount + 1;
 };
 
 export default displayComment;

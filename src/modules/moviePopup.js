@@ -18,7 +18,7 @@ const moviePopup = async (id, image, name, summary) => {
                 <div class="comments">
                 </div>
             </div>
-          <p>Comments (<span class="number">2</span>)</p>
+          <p>Comments (<span class="number">0</span>)</p>
           <form id="add-comment">
             <div class="error">Please fill in all fields!</div>
             <div class="div-form">
