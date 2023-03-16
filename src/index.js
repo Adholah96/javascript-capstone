@@ -28,6 +28,11 @@ window.addEventListener('load', async () => {
   const likes = await getLikes();
   showLike(likes);
 
+  const movies = document.querySelectorAll('.anime-holder');
+  const allMovies = movies.length;
+  const totalHolder = document.querySelector('.totality');
+  totalHolder.innerHTML = allMovies;
+
   document.addEventListener('click', async (event) => {
     const commentbtn = event.target.closest('.modal-btn');
     const closebtn = event.target.closest('.btn-close');
