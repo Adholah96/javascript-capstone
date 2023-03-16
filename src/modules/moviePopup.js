@@ -1,9 +1,9 @@
-import sendComment from './sendComment.js';
-import displayComment, { includeUI } from './displayComment.js';
+import sendComment from './sendComment.js'
+import displayComment, { includeUI } from './displayComment.js'
 
-const container = document.querySelector('.pop-content');
+const container = document.querySelector('.pop-content')
 const moviePopup = async (id, image, name, summary) => {
-  container.innerHTML = '';
+  container.innerHTML = ''
   container.innerHTML += `
           <div class="movie-div show-${id}" >
             <p class="pop-header">${name}</p>
@@ -33,22 +33,22 @@ const moviePopup = async (id, image, name, summary) => {
               </div>
             </div>
           </form>
-    `;
-  const names = document.getElementById('name');
-  const comment = document.getElementById('comment');
-  const submit = document.getElementById('sub-comment');
+    `
+  const names = document.getElementById('name')
+  const comment = document.getElementById('comment')
+  const submit = document.getElementById('sub-comment')
 
   submit.addEventListener('click', async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (names.value !== '' && comment.value !== '') {
-      await sendComment(id, names.value, comment.value);
-      includeUI(names.value, comment.value);
-      names.value = '';
-      comment.value = '';
+      await sendComment(id, names.value, comment.value)
+      includeUI(names.value, comment.value)
+      names.value = ''
+      comment.value = ''
     }
-  });
+  })
 
-  displayComment(id);
-};
+  displayComment(id)
+}
 
-export default moviePopup;
+export default moviePopup
