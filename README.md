@@ -73,6 +73,8 @@
 
 - [Coming soon...](#)
 
+- [Project Video Link](https://drive.google.com/file/d/17TX--ZEDC-sypQzLbuCRr3fSbdd0-K3j/view?usp=sharing)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
