@@ -1,21 +1,19 @@
-import { includeUI } from './displayComment.js';
+import countComments from './commentCounter.js';
 
-describe('includeUI', () => {
-  let mockCommentsContainer;
-  let mockCommentsNumber;
-
-  beforeEach(() => {
-    mockCommentsContainer = document.createElement('div');
-    mockCommentsNumber = document.createElement('span');
-    mockCommentsNumber.className = 'number';
-    mockCommentsContainer.appendChild(mockCommentsNumber);
-    document.querySelector = jest.fn(() => mockCommentsContainer);
+describe('countComments in the modal', () => {
+  test('returns the correct number of comments in the modal', () => {
+    const comments = [
+      { username: 'heldricks', comment: 'wow, lovely!' },
+      { username: 'kevin', comment: 'Thanks for sharing this.' },
+      { username: 'ochieng', comment: 'I love the design.' },
+    ];
+    const result = countComments(comments);
+    expect(result).toEqual(3);
   });
 
-  it('should increment the comment counter', () => {
-    const initialCounter = mockCommentsNumber.textContent;
-    includeUI('testUser', 'testComment');
-    const updatedCounter = mockCommentsNumber.textContent;
-    expect(parseInt(updatedCounter, 10)).toBe(parseInt(initialCounter, 10) + 1);
+  test('returns zero when there is no comment', () => {
+    const comments = [];
+    const result = countComments(comments);
+    expect(result).toEqual(0);
   });
 });

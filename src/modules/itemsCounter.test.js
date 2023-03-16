@@ -1,19 +1,12 @@
-describe('Total movie items on the DOM', () => {
-  test('Display the total on the header section', () => {
+import movieCounter from './movieCounter.js';
+
+describe('count all movies created on the DOM', () => {
+  test('returns the correct number of movie items on the DOM', () => {
     document.body.innerHTML = `
-      <header>
-        <span class="totality"></span>
-      </header>
       <div class="anime-holder"></div>
       <div class="anime-holder"></div>
-      <div class="anime-holder"></div> 
-        `;
-
-    const movies = document.querySelectorAll('.anime-holder');
-    const allMovies = movies.length;
-    const totalHolder = document.querySelector('.totality');
-    totalHolder.innerHTML = allMovies;
-
-    expect(totalHolder.innerHTML).toEqual('3');
+      <div class="anime-holder"></div>
+    `;
+    expect(movieCounter()).toEqual(3);
   });
 });

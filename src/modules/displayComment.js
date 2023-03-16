@@ -1,9 +1,8 @@
 import getComment from './getComment.js';
+import countComments from './commentCounter.js';
 
-let counter = 0;
 const displayComment = async (id) => {
   const commentData = await getComment(id);
-  counter = commentData.length;
   const totalCount = document.querySelector('.number');
   const comments = document.querySelector('.comment-holder');
   const shwComments = document.querySelector('.comments');
@@ -14,7 +13,9 @@ const displayComment = async (id) => {
     `;
   });
   comments.appendChild(shwComments);
-  totalCount.textContent = counter;
+
+  const commentCount = countComments(commentData);
+  totalCount.textContent = commentCount;
 };
 
 export const includeUI = (username, comment) => {

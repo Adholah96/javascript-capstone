@@ -7,6 +7,7 @@ import postLike from './modules/postLikes.js';
 import getLikes from './modules/getLikes.js';
 import showLike from './modules/showLikes.js';
 import moviePopup from './modules/moviePopup.js';
+import movieCounter from './modules/movieCounter.js';
 
 const showPopup = document.querySelector('.popup');
 
@@ -28,10 +29,9 @@ window.addEventListener('load', async () => {
   const likes = await getLikes();
   showLike(likes);
 
-  const movies = document.querySelectorAll('.anime-holder');
-  const allMovies = movies.length;
+  const countedMovies = movieCounter();
   const totalHolder = document.querySelector('.totality');
-  totalHolder.innerHTML = allMovies;
+  totalHolder.innerHTML = countedMovies;
 
   document.addEventListener('click', async (event) => {
     const commentbtn = event.target.closest('.modal-btn');
