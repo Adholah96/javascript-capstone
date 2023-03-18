@@ -71,7 +71,7 @@
 
 ## 🚀 Live Demo <a name="live-demo" ></a>
 
-- [Coming soon...](#)
+- [Live Demo](https://adholah96.github.io/javascript-capstone/dist/)
 
 - [Project Video Link](https://drive.google.com/file/d/17TX--ZEDC-sypQzLbuCRr3fSbdd0-K3j/view?usp=sharing)
 
